@@ -46,6 +46,7 @@ if ( class_exists( 'GFForms' ) ) {
 		} /* do nothing */
 
 		public function init_admin() {
+			parent::init_admin();
 			add_action( 'show_user_profile', array( $this, 'show_user_profile' ) );
 			add_action( 'edit_user_profile',  array( $this, 'show_user_profile' ) );
 			add_action( 'personal_options_update', array( $this, 'user_profile_options_update' ) );

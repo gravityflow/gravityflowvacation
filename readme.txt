@@ -44,6 +44,10 @@ The Gravity Flow Vacation Requests Extension will work with any license of [Grav
 
 == ChangeLog ==
 
+= 1.0.0.2 =
+- Fixed an issue where capabilities are not available to roles.
+
+
 = 1.0.0.1 =
 - Fixed an issue where the approved calculation ignores workflow which don't end in an approval step.
 
