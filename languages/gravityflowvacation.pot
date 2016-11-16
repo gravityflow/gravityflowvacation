@@ -1,0 +1,125 @@
+# Copyright 2015-2016 Steven Henty.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Flow Vacation Requests Extension 1.0.0.6\n"
+"Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
+"POT-Creation-Date: 2016-11-16 22:21:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Steven Henty <support@gravityflow.io>\n"
+"Language-Team: Steven Henty <support@gravityflow.io>\n"
+"X-Generator: Gravity Flow Build Script\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Project-Id-Version: gravityflowvacation\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Textdomain-Support: yes\n"
+
+#: class-vacation.php:72
+msgid "Vacation Information"
+msgstr ""
+
+#: class-vacation.php:76
+msgid "Annual Paid Time Off (PTO)"
+msgstr ""
+
+#: class-vacation.php:83
+msgid "Days based on service"
+msgstr ""
+
+#: class-vacation.php:88 class-vacation.php:290
+msgid "Comp Days"
+msgstr ""
+
+#: class-vacation.php:95
+msgid "Compensatory Days"
+msgstr ""
+
+#: class-vacation.php:100 class-vacation.php:291
+msgid "HR Adjustment"
+msgstr ""
+
+#: class-vacation.php:107
+msgid "Adjustment days"
+msgstr ""
+
+#: class-vacation.php:112
+msgid "Carry Over Days"
+msgstr ""
+
+#: class-vacation.php:119
+msgid "Days carried over from last year"
+msgstr ""
+
+#: class-vacation.php:123
+msgid "Days approved"
+msgstr ""
+
+#: class-vacation.php:129
+msgid "Balance remaining"
+msgstr ""
+
+#: class-vacation.php:154
+msgid "Number Format"
+msgstr ""
+
+#: class-vacation.php:289
+msgid "PTO"
+msgstr ""
+
+#: class-vacation.php:292
+msgid "Carry Over"
+msgstr ""
+
+#: class-vacation.php:293
+msgid "Approved Time Off"
+msgstr ""
+
+#: class-vacation.php:294
+msgid "Balance Remaining"
+msgstr ""
+
+#: class-vacation.php:322 includes/class-field-vacation.php:61
+msgid "Current balance:"
+msgstr ""
+
+#: includes/class-field-vacation.php:25
+msgid "Workflow Fields"
+msgstr ""
+
+#: includes/class-field-vacation.php:47
+msgid "Vacation Days"
+msgstr ""
+
+#: includes/class-field-vacation.php:71
+msgid "Days requested: %s"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Gravity Flow Vacation Requests Extension"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://gravityflow.io"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Vacation Days Extension for Gravity Flow."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Steve Henty"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.stevenhenty.com"
+msgstr ""
