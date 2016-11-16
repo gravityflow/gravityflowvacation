@@ -45,6 +45,11 @@ if ( class_exists( 'GFForms' ) ) {
 		private function __clone() {
 		} /* do nothing */
 
+		public function init() {
+			parent::init();
+			add_filter( 'gform_entry_field_value', array( $this, 'filter_gform_entry_field_value'), 10, 4);
+		}
+
 		public function init_admin() {
 			parent::init_admin();
 			add_action( 'show_user_profile', array( $this, 'show_user_profile' ) );
@@ -167,6 +172,8 @@ if ( class_exists( 'GFForms' ) ) {
 				return false;
 			}
 
+			$this->log_debug( __METHOD__ . '(): starting calculation of approved time of for user ID ' . $user_id );
+
 			$forms = GFAPI::get_forms();
 
 			$base_search_criteria = array(
@@ -210,11 +217,15 @@ if ( class_exists( 'GFForms' ) ) {
 					}
 					$search_criteria['field_filters'][] = array( 'key' => 'workflow_step_status_' . $last_approval_step_id, 'value' => 'approved' );
 
-					$entries = GFAPI::get_entries( $form['id'], $search_criteria );
+					$paging = array( 'offset' => 0, 'page_size' => 150 );
+
+					$entries = GFAPI::get_entries( $form['id'], $search_criteria, null, $paging );
 
 					foreach ( $entries as $entry ) {
 						foreach ( $vacation_fields  as $vacation_field ) {
-							$total += $entry[ (string) $vacation_field->id ];
+							$days = $entry[ (string) $vacation_field->id ];
+							$this->log_debug( __METHOD__ . '(): adding ' . $days . ' days from entry ' . $entry['id'] );
+							$total += $days;
 						}
 					}
 				}
@@ -301,6 +312,19 @@ if ( class_exists( 'GFForms' ) ) {
 			}
 
 			return $value;
+		}
+
+		public function filter_gform_entry_field_value( $display_value, $field, $entry, $form ) {
+			if ( $field->type == 'workflow_vacation' ) {
+				$user_id   = $entry['created_by'];
+				$remaining = self::get_balance( $user_id );
+				$html      = '<div class="gravityflow-vacation-days-balance-container">';
+				$html .= esc_html__( 'Current balance:', 'gravityflowvacation' ) . ' ' . esc_html( $remaining );
+				$html .= '<div>';
+				$display_value = $html . $display_value;
+			}
+
+			return $display_value;
 		}
 	}
 }

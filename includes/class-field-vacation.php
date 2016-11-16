@@ -4,6 +4,8 @@ if ( ! class_exists( 'GFForms' ) ) {
 	die();
 }
 
+
+
 class Gravity_Flow_Field_Vacation extends GF_Field_Number {
 
 	public $type = 'workflow_vacation';
@@ -50,7 +52,8 @@ class Gravity_Flow_Field_Vacation extends GF_Field_Number {
 		if ( $this->is_form_editor() ) {
 			$remaining = '';
 		} else {
-			$remaining = $this->get_balance();
+			$created_by = $entry['created_by'];
+			$remaining = self::get_balance( $created_by );
 		}
 		$html = '<div class="gravityflow-vacation-request-container">';
 		$html .= parent::get_field_input( $form, $value, $entry );
@@ -63,11 +66,8 @@ class Gravity_Flow_Field_Vacation extends GF_Field_Number {
 
 	public function get_value_entry_detail( $value, $currency = '', $use_text = false, $format = 'html', $media = 'screen' ) {
 		$days = parent::get_value_entry_detail( $value, $currency, $use_text, $format, $media );
-		$remaining = $this->get_balance();
 
 		$html = '<div class="gravityflow-vacation-days-container">';
-		$html .= esc_html__( 'Current balance:', 'gravityflowvacation' ) . ' ' . esc_html( $remaining );
-		$html .= '<br />';
 		$html .= '<strong>' . sprintf( esc_html__( 'Days requested: %s', 'gravityflowvacation' ), $days ) . '</strong>';
 		$html .= '</div>';
 		return $html;
@@ -77,8 +77,8 @@ class Gravity_Flow_Field_Vacation extends GF_Field_Number {
 		return gravity_flow_vacation()->get_approved_time_off();
 	}
 
-	public function get_balance() {
-		return gravity_flow_vacation()->get_balance();
+	public static function get_balance( $user_id = null ) {
+		return gravity_flow_vacation()->get_balance( $user_id );
 	}
 }
 

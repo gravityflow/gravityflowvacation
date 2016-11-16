@@ -44,6 +44,19 @@ The Gravity Flow Vacation Requests Extension will work with any license of [Grav
 
 == ChangeLog ==
 
+= 1.0.0.6 =
+- Fixed an issue with the calculation of the balance where only the first 20 entries are counted.
+
+= 1.0.0.5 =
+- Added logging statements.
+
+= 1.0.0.4 =
+- Rolled back removal of the current balance from the entry detail page.
+
+= 1.0.0.3 =
+- Fixed an issue where the balance shows the balance for the current users instead of the submitter.
+- Removed the current balance from the entry detail page.
+
 = 1.0.0.2 =
 - Fixed an issue where capabilities are not available to roles.
 
