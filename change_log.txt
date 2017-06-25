@@ -1,0 +1,3 @@
+- Added the gravityflowvacation_start_month filter.
+- Updated the vacation days calculation to search for the final status of entries instead of the status of the last approval step.
+

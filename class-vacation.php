@@ -184,9 +184,38 @@ if ( class_exists( 'GFForms' ) ) {
 				),
 			);
 
-			$start_date = date( 'Y' ) . '-01-01';
-			$last_day   = date( 'Y-m-d', strtotime( '12/31' ) );
-			$end_date   = $last_day ;
+			// Default holiday year starts on 1 Jan
+			$month = '01';
+
+			/**
+			 * Allows the start month for the holiday year to be filtered.
+			 *
+			 * @since 1.1
+			 *
+			 * @param $month
+			 */
+			apply_filters( 'gravityflowvacation_start_month', $month );
+
+			// Ensure the month is prefixed with a leading zero.
+			$month = sprintf( '%02d', $month );
+
+			// Current year
+			$year = date( 'Y' );
+
+			$current_month = date( 'm' );
+
+			if ( (int) $current_month < (int) $month ) {
+				// The current holiday year started the during the previous calendar year
+				$year -= 1;
+			}
+
+			$start_date = $year . '-' . $month . '-01';
+			$start_date_timestamp = strtotime( $start_date );
+
+			$end_date = date( 'Y-m-d', strtotime( '+1 year', $start_date_timestamp ) );
+			$end_date_timestamp = strtotime( $end_date );
+			$end_date_timestamp = strtotime( '-1 day', $end_date_timestamp );
+			$end_date   = date( 'Y-m-d', $end_date_timestamp );
 
 			$total = 0;
 
@@ -204,18 +233,8 @@ if ( class_exists( 'GFForms' ) ) {
 						$search_criteria['field_filters'][] = array( 'key' => $date_field->id, 'value' => $end_date, 'operator' => '<' );
 					}
 
-					$api = new Gravity_Flow_API( $form['id'] );
-					$steps = $api->get_steps();
-					$last_approval_step_id = 0;
-					foreach ( $steps as $step ) {
-						if ( $step->get_type() == 'approval' ) {
-							$last_approval_step_id = $step->get_id();
-						}
-					}
-					if ( $last_approval_step_id === 0 ) {
-						continue;
-					}
-					$search_criteria['field_filters'][] = array( 'key' => 'workflow_step_status_' . $last_approval_step_id, 'value' => 'approved' );
+					$search_criteria['field_filters'][] = array( 'key' => 'workflow_final_status', 'value' => 'approved' );
+
 
 					$paging = array( 'offset' => 0, 'page_size' => 150 );
 
