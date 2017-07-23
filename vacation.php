@@ -9,7 +9,7 @@ Author URI: http://www.stevenhenty.com
 License: GPL-3.0+
 
 ------------------------------------------------------------------------
-Copyright 2015-2016 Steven Henty
+Copyright 2015-2017 Steven Henty
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
