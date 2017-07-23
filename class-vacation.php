@@ -275,6 +275,21 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$total_available = $annual_paid_time_off + $comp_days + $hr_adjustment + $carry - $approved;
 
+			/**
+			 * Allows the user's balance to be filtered.
+			 *
+			 * @since 1.1
+			 *
+			 * @param float $total_available The total balance available for the user.
+			 * @param int $user_id The User ID.
+			 * @param float $annual_paid_time_off The value of the paid time off setting for the user.
+			 * @param float $comp_days The value of the Comp Days setting for the user.
+			 * @param float $hr_adjustment The value of the HR adjustment setting for the user.
+			 * @param float $carry The value of the Carry Over setting for the user.
+			 * @param float $approved The number of days approved for the user.
+			 */
+			apply_filters( 'gravityflowvacation_balance', $total_available, $user_id, $annual_paid_time_off, $comp_days, $hr_adjustment, $carry, $approved );
+
 			return $total_available;
 		}
 
