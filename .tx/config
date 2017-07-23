@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[gravityflow.gravityflowvacation]
+[gravityflowvacation.gravityflowvacation]
 file_filter = languages/gravityflowvacation-<lang>.po
 source_file = languages/gravityflowvacation.pot
 source_lang = en_US

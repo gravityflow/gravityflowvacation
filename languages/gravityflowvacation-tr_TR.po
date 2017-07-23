@@ -1,0 +1,124 @@
+# Copyright 2015-2016 Steven Henty.
+# Translators:
+# Süha Karalar <suhakaralar@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: gravityflowvacation\n"
+"Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
+"POT-Creation-Date: 2016-11-16 22:21:07+00:00\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Süha Karalar <suhakaralar@gmail.com>, 2017\n"
+"Language-Team: Turkish (Turkey) (https://www.transifex.com/gravityflow/teams/50678/tr_TR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gravity Flow Build Script\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Textdomain-Support: yes\n"
+
+#: class-vacation.php:72
+msgid "Vacation Information"
+msgstr "İzin Bilgileri"
+
+#: class-vacation.php:76
+msgid "Annual Paid Time Off (PTO)"
+msgstr "Yıllık Ücretli İzin"
+
+#: class-vacation.php:83
+msgid "Days based on service"
+msgstr "Hizmet gün sayısı"
+
+#: class-vacation.php:88 class-vacation.php:290
+msgid "Comp Days"
+msgstr "Telafi Gün Sayısı"
+
+#: class-vacation.php:95
+msgid "Compensatory Days"
+msgstr "Telafi Gün Sayısı"
+
+#: class-vacation.php:100 class-vacation.php:291
+msgid "HR Adjustment"
+msgstr "İnsan Kaynakları Ayarlama"
+
+#: class-vacation.php:107
+msgid "Adjustment days"
+msgstr "Ayarlama günleri"
+
+#: class-vacation.php:112
+msgid "Carry Over Days"
+msgstr "Devreden Gün Sayısı"
+
+#: class-vacation.php:119
+msgid "Days carried over from last year"
+msgstr "Geçen yıldan devreden gün sayısı"
+
+#: class-vacation.php:123
+msgid "Days approved"
+msgstr "Onaylanan Gün Sayısı"
+
+#: class-vacation.php:129
+msgid "Balance remaining"
+msgstr "Kalan Süre"
+
+#: class-vacation.php:154
+msgid "Number Format"
+msgstr "Sayı Biçimi"
+
+#: class-vacation.php:289
+msgid "PTO"
+msgstr "Yıllık Ücretli İzin"
+
+#: class-vacation.php:292
+msgid "Carry Over"
+msgstr "Devreden"
+
+#: class-vacation.php:293
+msgid "Approved Time Off"
+msgstr "Onaylanan Ücretli İzin"
+
+#: class-vacation.php:294
+msgid "Balance Remaining"
+msgstr "Kalan Süre"
+
+#: class-vacation.php:322 includes/class-field-vacation.php:61
+msgid "Current balance:"
+msgstr "Geçerli Gün:"
+
+#: includes/class-field-vacation.php:25
+msgid "Workflow Fields"
+msgstr "İş Akışı Alanları"
+
+#: includes/class-field-vacation.php:47
+msgid "Vacation Days"
+msgstr "İzinli Günler"
+
+#: includes/class-field-vacation.php:71
+msgid "Days requested: %s"
+msgstr "İstenen gün sayısı:%s"
+
+#. Plugin Name of the plugin/theme
+msgid "Gravity Flow Vacation Requests Extension"
+msgstr "Gravity Flow İzin Talep Uzantısı"
+
+#. Plugin URI of the plugin/theme
+msgid "http://gravityflow.io"
+msgstr "http://gravityflow.io"
+
+#. Description of the plugin/theme
+msgid "Vacation Days Extension for Gravity Flow."
+msgstr "Gravity Flow için İzin Talep Uzantısı"
+
+#. Author of the plugin/theme
+msgid "Steve Henty"
+msgstr "Steve Henty"
+
+#. Author URI of the plugin/theme
+msgid "http://www.stevenhenty.com"
+msgstr "http://www.stevenhenty.com"
