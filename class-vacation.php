@@ -288,7 +288,7 @@ if ( class_exists( 'GFForms' ) ) {
 			 * @param float $carry The value of the Carry Over setting for the user.
 			 * @param float $approved The number of days approved for the user.
 			 */
-			apply_filters( 'gravityflowvacation_balance', $total_available, $user_id, $annual_paid_time_off, $comp_days, $hr_adjustment, $carry, $approved );
+			$total_available = apply_filters( 'gravityflowvacation_balance', $total_available, $user_id, $annual_paid_time_off, $comp_days, $hr_adjustment, $carry, $approved );
 
 			return $total_available;
 		}
