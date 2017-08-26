@@ -63,6 +63,24 @@ if ( class_exists( 'GFForms' ) ) {
 			add_filter( 'manage_users_custom_column', array( $this, 'filter_manage_users_custom_column' ), 10, 3 );
 		}
 
+		/**
+		 * Add the extension capabilities to the Gravity Flow group in Members.
+		 *
+		 * @since 1.1-dev
+		 *
+		 * @param array $caps The capabilities and their human readable labels.
+		 *
+		 * @return array
+		 */
+		public function get_members_capabilities( $caps ) {
+			$prefix = $this->get_short_title() . ': ';
+
+			$caps['gravityflowvacation_settings']      = $prefix . __( 'Manage Settings', 'gravityflowvacation' );
+			$caps['gravityflowvacation_uninstall']     = $prefix . __( 'Uninstall', 'gravityflowvacation' );
+			$caps['gravityflowvacation_edit_profiles'] = $prefix . __( 'Edit Users', 'gravityflowvacation' );
+
+			return $caps;
+		}
 
 		function show_user_profile( $user ) {
 			$approved = gravity_flow_vacation()->get_approved_time_off( $user->ID );
