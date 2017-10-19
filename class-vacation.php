@@ -151,7 +151,7 @@ if ( class_exists( 'GFForms' ) ) {
 			?>
 			<li class="vacation_days_format_setting field_setting">
 				<label for="field_number_format">
-					<?php esc_html_e( 'Number Format', 'gravityforms' ); ?>
+					<?php esc_html_e( 'Number Format', 'gravityflow' ); ?>
 					<?php gform_tooltip( 'form_field_number_format' ) ?>
 				</label>
 				<select id="field_number_format" onchange="SetFieldProperty('numberFormat', this.value);jQuery('.field_calculation_rounding').toggle(this.value != 'currency');">

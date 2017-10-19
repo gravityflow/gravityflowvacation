@@ -22,7 +22,7 @@ class Gravity_Flow_Field_Vacation extends GF_Field_Number {
 				return $field_groups;
 			}
 		}
-		$field_groups[] = array( 'name' => 'workflow_fields', 'label' => __( 'Workflow Fields', 'gravityforms' ), 'fields' => array() );
+		$field_groups[] = array( 'name' => 'workflow_fields', 'label' => __( 'Workflow Fields', 'gravityflow' ), 'fields' => array() );
 		return $field_groups;
 	}
 
