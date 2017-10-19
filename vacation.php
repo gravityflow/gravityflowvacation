@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Gravity Flow Vacation Requests Extension
-Plugin URI: http://gravityflow.io
+Plugin URI: https://gravityflow.io
 Description: Vacation Days Extension for Gravity Flow.
 Version: 1.1-dev
-Author: Steve Henty
-Author URI: http://www.stevenhenty.com
+Author: Gravity Flow
+Author URI: https://gravityflow.io
 License: GPL-3.0+
 
 ------------------------------------------------------------------------
