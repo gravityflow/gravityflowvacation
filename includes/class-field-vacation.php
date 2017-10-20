@@ -22,7 +22,7 @@ class Gravity_Flow_Field_Vacation extends GF_Field_Number {
 				return $field_groups;
 			}
 		}
-		$field_groups[] = array( 'name' => 'workflow_fields', 'label' => __( 'Workflow Fields', 'gravityflow' ), 'fields' => array() );
+		$field_groups[] = array( 'name' => 'workflow_fields', 'label' => __( 'Workflow Fields', 'gravityflowvacation' ), 'fields' => array() );
 		return $field_groups;
 	}
 
@@ -44,7 +44,7 @@ class Gravity_Flow_Field_Vacation extends GF_Field_Number {
 
 
 	public function get_form_editor_field_title() {
-		return __( 'Vacation Days', 'gravityflow' );
+		return __( 'Vacation Days', 'gravityflowvacation' );
 	}
 
 	public function get_field_input( $form, $value = '', $entry = null ) {
