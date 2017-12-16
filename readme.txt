@@ -44,6 +44,12 @@ The Gravity Flow Vacation Requests Extension will work with any license of [Grav
 
 == ChangeLog ==
 
+= 1.1 =
+- Added the gravityflowvacation_start_month filter.
+- Added the gravityflowvacation_balance filter.
+- Updated the vacation days calculation to search for the final status of entries instead of the status of the last approval step.
+- Updated Members 2.0 integration to use human readable labels for the capabilities. Requires Gravity Flow 1.8.1 or greater.
+
 = 1.0.0.6 =
 - Fixed an issue with the calculation of the balance where only the first 20 entries are counted.
 

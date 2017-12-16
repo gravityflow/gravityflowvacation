@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowvacation\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-07-23 19:51:30+00:00\n"
+"POT-Creation-Date: 2017-10-22 17:20:25+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xavi Ivars <xavi.ivars@gmail.com>, 2017\n"
 "Language-Team: Catalan (https://www.transifex.com/gravityflow/teams/50678/ca/)\n"
@@ -25,71 +25,83 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
-#: class-vacation.php:72
+#: class-vacation.php:78
+msgid "Manage Settings"
+msgstr "Gestiona els paràmetres"
+
+#: class-vacation.php:79
+msgid "Uninstall"
+msgstr "Desinstal·la"
+
+#: class-vacation.php:80
+msgid "Edit Users"
+msgstr "Edita els usuaris"
+
+#: class-vacation.php:90
 msgid "Vacation Information"
 msgstr "Informació de les vacances"
 
-#: class-vacation.php:76
+#: class-vacation.php:94
 msgid "Annual Paid Time Off (PTO)"
 msgstr "Vacances anuals remunerades (PTO)"
 
-#: class-vacation.php:83
+#: class-vacation.php:101
 msgid "Days based on service"
 msgstr "Dies basats en el treball"
 
-#: class-vacation.php:88 class-vacation.php:324
+#: class-vacation.php:106 class-vacation.php:350
 msgid "Comp Days"
 msgstr "Dies de compensació"
 
-#: class-vacation.php:95
+#: class-vacation.php:113
 msgid "Compensatory Days"
 msgstr "Dies de compensació"
 
-#: class-vacation.php:100 class-vacation.php:325
+#: class-vacation.php:118 class-vacation.php:351
 msgid "HR Adjustment"
 msgstr "Ajust dels RH"
 
-#: class-vacation.php:107
+#: class-vacation.php:125
 msgid "Adjustment days"
 msgstr "Dies d'ajust"
 
-#: class-vacation.php:112
+#: class-vacation.php:130
 msgid "Carry Over Days"
 msgstr "Dies de vacances acumulats"
 
-#: class-vacation.php:119
+#: class-vacation.php:137
 msgid "Days carried over from last year"
 msgstr "Dies acumulats de l'any anterior"
 
-#: class-vacation.php:123
+#: class-vacation.php:141
 msgid "Days approved"
 msgstr "Dies aprovats"
 
-#: class-vacation.php:129
+#: class-vacation.php:147
 msgid "Balance remaining"
 msgstr "Vacances restants"
 
-#: class-vacation.php:154
+#: class-vacation.php:172
 msgid "Number Format"
 msgstr "Format dels números"
 
-#: class-vacation.php:323
+#: class-vacation.php:349
 msgid "PTO"
 msgstr "Dies de vacances"
 
-#: class-vacation.php:326
+#: class-vacation.php:352
 msgid "Carry Over"
 msgstr "Acumula'ls"
 
-#: class-vacation.php:327
+#: class-vacation.php:353
 msgid "Approved Time Off"
 msgstr "Vacances aprovades"
 
-#: class-vacation.php:328
+#: class-vacation.php:354
 msgid "Balance Remaining"
 msgstr "Vacances restants"
 
-#: class-vacation.php:356 includes/class-field-vacation.php:61
+#: class-vacation.php:383 includes/class-field-vacation.php:61
 msgid "Current balance:"
 msgstr "Vacances pendents:"
 
@@ -109,18 +121,14 @@ msgstr "Dies sol·licitats: %s"
 msgid "Gravity Flow Vacation Requests Extension"
 msgstr "Extensió Sol·licituds de vacances del Gravity Flow"
 
-#. Plugin URI of the plugin/theme
-msgid "http://gravityflow.io"
-msgstr "http://gravityflow.io"
+#. Author URI of the plugin/theme
+msgid "https://gravityflow.io"
+msgstr "https://gravityflow.io"
 
 #. Description of the plugin/theme
 msgid "Vacation Days Extension for Gravity Flow."
 msgstr "Extensió Dies de vacances per al Gravity Flow."
 
 #. Author of the plugin/theme
-msgid "Steve Henty"
-msgstr "Steve Henty"
-
-#. Author URI of the plugin/theme
-msgid "http://www.stevenhenty.com"
-msgstr "http://www.stevenhenty.com"
+msgid "Gravity Flow"
+msgstr "Gravity Flow"
