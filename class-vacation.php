@@ -48,6 +48,7 @@ if ( class_exists( 'GFForms' ) ) {
 		public function init() {
 			parent::init();
 			add_filter( 'gform_entry_field_value', array( $this, 'filter_gform_entry_field_value' ), 10, 4 );
+			add_filter( 'gravityflow_shortcode_vacation', array( $this, 'shortcode' ), 10, 2 );
 		}
 
 		public function init_admin() {
@@ -91,50 +92,50 @@ if ( class_exists( 'GFForms' ) ) {
 			<table class="form-table">
 				<tr>
 					<th><label
-							for="gravityflow_vacation_pto"><?php esc_html_e( 'Annual Paid Time Off (PTO)', 'gravityflowvacation' ); ?></label>
+								for="gravityflow_vacation_pto"><?php esc_html_e( 'Annual Paid Time Off (PTO)', 'gravityflowvacation' ); ?></label>
 					</th>
 					<td>
 						<input type="text" <?php echo $disabled; ?> name="gravityflow_vacation_pto"
-						       id="gravityflow_vacation_pto" class="small-text"
-						       value="<?php echo esc_attr( $this->get_user_option( 'gravityflow_vacation_pto', $user->ID ) ); ?>"/><br/>
+							   id="gravityflow_vacation_pto" class="small-text"
+							   value="<?php echo esc_attr( $this->get_user_option( 'gravityflow_vacation_pto', $user->ID ) ); ?>"/><br/>
 						<span
-							class="description"><?php esc_html_e( 'Days based on service', 'gravityflowvacation' ); ?></span>
+								class="description"><?php esc_html_e( 'Days based on service', 'gravityflowvacation' ); ?></span>
 					</td>
 				</tr>
 				<tr>
 					<th><label
-							for="gravityflow_vacation_comp_days"><?php esc_html_e( 'Comp Days', 'gravityflowvacation' ); ?></label>
+								for="gravityflow_vacation_comp_days"><?php esc_html_e( 'Comp Days', 'gravityflowvacation' ); ?></label>
 					</th>
 					<td>
 						<input type="text" <?php echo $disabled; ?> name="gravityflow_vacation_comp_days"
-						       id="gravityflow_vacation_comp_days" class="small-text"
-						       value="<?php echo esc_attr( $this->get_user_option( 'gravityflow_vacation_comp_days', $user->ID ) ); ?>"/><br/>
+							   id="gravityflow_vacation_comp_days" class="small-text"
+							   value="<?php echo esc_attr( $this->get_user_option( 'gravityflow_vacation_comp_days', $user->ID ) ); ?>"/><br/>
 						<span
-							class="description"><?php esc_html_e( 'Compensatory Days', 'gravityflowvacation' ); ?></span>
+								class="description"><?php esc_html_e( 'Compensatory Days', 'gravityflowvacation' ); ?></span>
 					</td>
 				</tr>
 				<tr>
 					<th><label
-							for="gravityflow_vacation_hr_adjustment"><?php esc_html_e( 'HR Adjustment', 'gravityflowvacation' ); ?></label>
+								for="gravityflow_vacation_hr_adjustment"><?php esc_html_e( 'HR Adjustment', 'gravityflowvacation' ); ?></label>
 					</th>
 					<td>
 						<input type="text" <?php echo $disabled; ?> name="gravityflow_vacation_hr_adjustment"
-						       id="gravityflow_vacation_hr_adjustment" class="small-text"
-						       value="<?php echo esc_attr( $this->get_user_option( 'gravityflow_vacation_hr_adjustment', $user->ID ) ); ?>"/><br/>
+							   id="gravityflow_vacation_hr_adjustment" class="small-text"
+							   value="<?php echo esc_attr( $this->get_user_option( 'gravityflow_vacation_hr_adjustment', $user->ID ) ); ?>"/><br/>
 						<span
-							class="description"><?php esc_html_e( 'Adjustment days', 'gravityflowvacation' ); ?></span>
+								class="description"><?php esc_html_e( 'Adjustment days', 'gravityflowvacation' ); ?></span>
 					</td>
 				</tr>
 				<tr>
 					<th><label
-							for="gravityflow_vacation_carry"><?php esc_html_e( 'Carry Over Days', 'gravityflowvacation' ); ?></label>
+								for="gravityflow_vacation_carry"><?php esc_html_e( 'Carry Over Days', 'gravityflowvacation' ); ?></label>
 					</th>
 					<td>
 						<input type="text" <?php echo $disabled; ?> name="gravityflow_vacation_carry"
-						       id="gravityflow_vacation_carry" class="small-text"
-						       value="<?php echo esc_attr( $this->get_user_option( 'gravityflow_vacation_carry', $user->ID ) ); ?>"/><br/>
+							   id="gravityflow_vacation_carry" class="small-text"
+							   value="<?php echo esc_attr( $this->get_user_option( 'gravityflow_vacation_carry', $user->ID ) ); ?>"/><br/>
 						<span
-							class="description"><?php esc_html_e( 'Days carried over from last year', 'gravityflowvacation' ); ?></span>
+								class="description"><?php esc_html_e( 'Days carried over from last year', 'gravityflowvacation' ); ?></span>
 					</td>
 				</tr>
 				<tr>
@@ -172,7 +173,8 @@ if ( class_exists( 'GFForms' ) ) {
 					<?php esc_html_e( 'Number Format', 'gravityflowvacation' ); ?>
 					<?php gform_tooltip( 'form_field_number_format' ) ?>
 				</label>
-				<select id="field_number_format" onchange="SetFieldProperty('numberFormat', this.value);jQuery('.field_calculation_rounding').toggle(this.value != 'currency');">
+				<select id="field_number_format"
+						onchange="SetFieldProperty('numberFormat', this.value);jQuery('.field_calculation_rounding').toggle(this.value != 'currency');">
 					<option value="decimal_dot">9,999.99</option>
 					<option value="decimal_comma">9.999,99</option>
 				</select>
@@ -247,18 +249,21 @@ if ( class_exists( 'GFForms' ) ) {
 						$search_criteria['end_date']   = $end_date . ' 23:59:59';
 					} else {
 						$date_field                         = $date_fields[0];
-						$search_criteria['field_filters'][] = array( 'key'      => $date_field->id,
-						                                             'value'    => $start_date,
-						                                             'operator' => '>='
+						$search_criteria['field_filters'][] = array(
+							'key'      => $date_field->id,
+							'value'    => $start_date,
+							'operator' => '>=',
 						);
-						$search_criteria['field_filters'][] = array( 'key'      => $date_field->id,
-						                                             'value'    => $end_date,
-						                                             'operator' => '<'
+						$search_criteria['field_filters'][] = array(
+							'key'      => $date_field->id,
+							'value'    => $end_date,
+							'operator' => '<',
 						);
 					}
 
-					$search_criteria['field_filters'][] = array( 'key'   => 'workflow_final_status',
-					                                             'value' => 'approved'
+					$search_criteria['field_filters'][] = array(
+						'key'   => 'workflow_final_status',
+						'value' => 'approved',
 					);
 
 
@@ -306,13 +311,13 @@ if ( class_exists( 'GFForms' ) ) {
 			 *
 			 * @since 1.1
 			 *
-			 * @param float $total_available      The total balance available for the user.
-			 * @param int   $user_id              The User ID.
+			 * @param float $total_available The total balance available for the user.
+			 * @param int $user_id The User ID.
 			 * @param float $annual_paid_time_off The value of the paid time off setting for the user.
-			 * @param float $comp_days            The value of the Comp Days setting for the user.
-			 * @param float $hr_adjustment        The value of the HR adjustment setting for the user.
-			 * @param float $carry                The value of the Carry Over setting for the user.
-			 * @param float $approved             The number of days approved for the user.
+			 * @param float $comp_days The value of the Comp Days setting for the user.
+			 * @param float $hr_adjustment The value of the HR adjustment setting for the user.
+			 * @param float $carry The value of the Carry Over setting for the user.
+			 * @param float $approved The number of days approved for the user.
 			 */
 			$total_available = apply_filters( 'gravityflowvacation_balance', $total_available, $user_id, $annual_paid_time_off, $comp_days, $hr_adjustment, $carry, $approved );
 
@@ -386,6 +391,40 @@ if ( class_exists( 'GFForms' ) ) {
 			}
 
 			return $display_value;
+		}
+
+		/**
+		 * Renders the shortcode.
+		 *
+		 * @since 1.1.2-dev
+		 *
+		 * @param $html
+		 * @param $atts
+		 *
+		 * @return string
+		 */
+		public function shortcode( $html, $atts ) {
+
+			$a = gravity_flow()->get_shortcode_atts( $atts );
+
+			$a['data']    = isset( $atts['data'] ) ? sanitize_text_field( $atts['data'] ) : 'balance';
+			$a['user_id'] = isset( $atts['user_id'] ) ? sanitize_text_field( $atts['user_id'] ) : get_current_user_id();
+
+			switch ( $a['data'] ) {
+				case 'pto' :
+				case 'comp_days' :
+				case 'hr_adjustment' :
+				case 'carry' :
+					$value = $this->get_user_option( 'gravityflow_vacation_' . $a['data'], $a['user_id'] );
+					break;
+				case 'approved' :
+					$value = $this->get_approved_time_off( $a['user_id'] );
+					break;
+				default:
+					$value = $this->get_balance( $a['user_id'] );
+			}
+
+			return floatval( $value );
 		}
 	}
 }

@@ -2,3 +2,5 @@
 - Added the gravityflowvacation_balance filter.
 - Updated the vacation days calculation to search for the final status of entries instead of the status of the last approval step.
 - Updated Members 2.0 integration to use human readable labels for the capabilities. Requires Gravity Flow 1.8.1 or greater.
+- Added the merge tag {workflow_vacation} with modifiers, including: pto, comp_days, hr_adjustment, carry, approved and balance.
+- Added the shortcode [gravityflow page="vacation"] which takes "user_id" and "data" attributes.

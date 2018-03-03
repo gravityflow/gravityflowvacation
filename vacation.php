@@ -25,7 +25,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define( 'GRAVITY_FLOW_VACATION_VERSION', '1.1.1-dev' );
+define( 'GRAVITY_FLOW_VACATION_VERSION', '1.1.2-dev' );
 
 define( 'GRAVITY_FLOW_VACATION_EDD_ITEM_NAME', 'Vacation Requests' );
 
@@ -35,6 +35,7 @@ class Gravity_Flow_Vacation_Bootstrap {
 
 	public static function load() {
 		require_once( 'includes/class-field-vacation.php' );
+		require_once( 'includes/class-merge-tag-vacation.php' );
 		require_once( 'class-vacation.php' );
 
 		gravity_flow_vacation();
