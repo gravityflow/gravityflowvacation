@@ -212,8 +212,8 @@ if ( class_exists( 'GFForms' ) ) {
 			 *
 			 * @since 1.1
 			 *
-			 * @param $month   The month to filter.
-			 * @param $user_id The ID of the user.
+			 * @param string $month   The month to filter.
+			 * @param int    $user_id The ID of the user.
 			 */
 			$month = apply_filters( 'gravityflowvacation_start_month', $month, $user_id );
 
