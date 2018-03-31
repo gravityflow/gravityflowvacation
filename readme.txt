@@ -44,6 +44,10 @@ The Gravity Flow Vacation Requests Extension will work with any license of [Grav
 
 == ChangeLog ==
 
+= 1.2 =
+- Added the merge tag {workflow_vacation} with modifiers, including: pto, comp_days, hr_adjustment, carry, approved and balance.
+- Added the shortcode [gravityflow page="vacation"] which takes "user_id" and "data" attributes.
+
 = 1.1 =
 - Added the gravityflowvacation_start_month filter.
 - Added the gravityflowvacation_balance filter.
