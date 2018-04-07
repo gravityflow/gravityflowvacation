@@ -19,6 +19,8 @@ if ( class_exists( 'GFForms' ) ) {
 
 		protected $_path = 'gravityflowvacation/vacation.php';
 
+		protected $_full_path = __FILE__;
+
 		// Title of the plugin to be used on the settings page, form settings and plugins page.
 		protected $_title = 'Vacation Requests Extension';
 
@@ -62,6 +64,9 @@ if ( class_exists( 'GFForms' ) ) {
 
 			add_filter( 'manage_users_columns', array( $this, 'filter_manage_users_columns' ) );
 			add_filter( 'manage_users_custom_column', array( $this, 'filter_manage_users_custom_column' ), 10, 3 );
+
+			// Change vacation form delete confirmation message.
+			add_filter( 'gform_form_actions', array( $this, 'filter_gform_form_actions' ), 10, 2 );
 		}
 
 		/**
@@ -350,6 +355,29 @@ if ( class_exists( 'GFForms' ) ) {
 			return $defaults;
 		}
 
+		public function scripts() {
+			$scripts = array();
+			if ( $this->is_form_list() ) {
+				$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG || isset( $_GET['gform_debug'] ) ? '' : '.min';
+
+				$scripts[] = array(
+					'handle'  => 'gravityflowvacation_vacation',
+					'src'     => $this->get_base_url() . "/js/vacation{$min}.js",
+					'version' => $this->_version,
+					'strings'  => array(
+						'message' => __( 'WARNING: You are about to delete this form and ALL entries associated with it. ', 'gravityform' ) . __( "\n\nAlso, this will affect the current VACATION BALANCE.\n\n", 'gravityflowvacation' ) . esc_html__( 'Cancel to stop, OK to delete.', 'gravityforms' )
+					),
+					'enqueue' => array(
+						array(
+							'query' => 'page=gf_edit_forms&filter=trash',
+						),
+					),
+				);
+			}
+
+			return array_merge( parent::scripts(), $scripts );
+		}
+
 		public function filter_manage_users_columns( $columns ) {
 
 			$columns['gravityflow_vacation_pto']               = esc_html__( 'PTO', 'gravityflowvacation' );
@@ -392,6 +420,25 @@ if ( class_exists( 'GFForms' ) ) {
 			}
 
 			return $display_value;
+		}
+
+		/**
+		 * Change the form delete action
+		 *
+		 * @param $actions array Form Actions.
+		 * @param $form_id int   Form ID.
+		 *
+		 * @return array Form Actions.
+		 */
+		public function filter_gform_form_actions( $actions, $form_id ) {
+			$form = GFAPI::get_form( $form_id );
+			$vacation_fields = GFAPI::get_fields_by_type( $form, 'workflow_vacation' );
+			if ( ! empty( $vacation_fields ) ) {
+				$actions['delete']['onclick'] = 'GravityFlowVacation.ConfirmDeleteVacationForm(' . absint( $form_id ) . ')';
+				$actions['delete']['onkeypress'] = 'GravityFlowVacation.ConfirmDeleteVacationForm(' . absint( $form_id ) . ')';
+			}
+
+			return $actions;
 		}
 
 		/**
