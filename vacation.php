@@ -9,7 +9,7 @@ Author URI: https://gravityflow.io
 License: GPL-2.0+
 
 ------------------------------------------------------------------------
-Copyright 2015-2018 Steven Henty
+Copyright 2015-2018 Steven Henty S.L.
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
@@ -38,7 +38,8 @@ class Gravity_Flow_Vacation_Bootstrap {
 		require_once( 'includes/class-merge-tag-vacation.php' );
 		require_once( 'class-vacation.php' );
 
-		gravity_flow_vacation();
+		// Registers the class name with GFAddOn.
+		GFAddOn::register( 'Gravity_Flow_Vacation' );
 	}
 }
 
