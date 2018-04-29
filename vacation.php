@@ -38,7 +38,8 @@ class Gravity_Flow_Vacation_Bootstrap {
 		require_once( 'includes/class-merge-tag-vacation.php' );
 		require_once( 'class-vacation.php' );
 
-		gravity_flow_vacation();
+		// Registers the class name with GFAddOn.
+		GFAddOn::register( 'Gravity_Flow_Vacation' );
 	}
 }
 
