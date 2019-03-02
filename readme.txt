@@ -2,7 +2,7 @@
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
 Requires at least: 4.0
-Tested up to: 4.4
+Tested up to: 5.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,6 +43,10 @@ The Gravity Flow Vacation Requests Extension will work with any license of [Grav
 
 
 == ChangeLog ==
+
+= 1.3 =
+- Added support for the license key constant GRAVITY_FLOW_VACATION_LICENSE_KEY.
+- Added a confirmation when deleting a form with a Vacation field.
 
 = 1.2 =
 - Added the merge tag {workflow_vacation} with modifiers, including: pto, comp_days, hr_adjustment, carry, approved and balance.

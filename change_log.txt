@@ -1,2 +1,0 @@
-- Added support for the license key constant
-- Updated the delete form confirmation message

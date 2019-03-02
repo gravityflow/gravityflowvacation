@@ -1,17 +1,18 @@
-# Copyright 2015-2017 Steven Henty.
+# Copyright 2015-2018 Steven Henty.
 # Translators:
 # FX Bénard <fxb@wp-translations.org>, 2017
 # Jose Manuel Cardoso Freitas <josefreitas2@gmail.com>, 2017
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowvacation\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-12-16 19:03:05+00:00\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-03-31 08:49:03+00:00\n"
+"PO-Revision-Date: 2016-11-16 22:40+0000\n"
 "Last-Translator: Jose Manuel Cardoso Freitas <josefreitas2@gmail.com>, 2017\n"
 "Language-Team: Portuguese (Portugal) (https://www.transifex.com/gravityflow/teams/50678/pt_PT/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -24,83 +25,83 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
-#: class-vacation.php:78
+#: class-vacation.php:79
 msgid "Manage Settings"
 msgstr "Gerir definições"
 
-#: class-vacation.php:79
+#: class-vacation.php:80
 msgid "Uninstall"
 msgstr "Desinstalar"
 
-#: class-vacation.php:80
+#: class-vacation.php:81
 msgid "Edit Users"
 msgstr "Editar utilizadores"
 
-#: class-vacation.php:90
+#: class-vacation.php:91
 msgid "Vacation Information"
 msgstr "Informação de férias"
 
-#: class-vacation.php:94
+#: class-vacation.php:95
 msgid "Annual Paid Time Off (PTO)"
 msgstr "Tempo de férias pago por ano (PTO)"
 
-#: class-vacation.php:101
+#: class-vacation.php:102
 msgid "Days based on service"
 msgstr "Dias com base no trabalho"
 
-#: class-vacation.php:106 class-vacation.php:350
+#: class-vacation.php:107 class-vacation.php:356
 msgid "Comp Days"
 msgstr "Dias úteis"
 
-#: class-vacation.php:113
+#: class-vacation.php:114
 msgid "Compensatory Days"
 msgstr "Dias compensatórios"
 
-#: class-vacation.php:118 class-vacation.php:351
+#: class-vacation.php:119 class-vacation.php:357
 msgid "HR Adjustment"
 msgstr "Ajustamentos dos RH"
 
-#: class-vacation.php:125
+#: class-vacation.php:126
 msgid "Adjustment days"
 msgstr "Dias de ajustes"
 
-#: class-vacation.php:130
+#: class-vacation.php:131
 msgid "Carry Over Days"
 msgstr "Dias a transportar"
 
-#: class-vacation.php:137
+#: class-vacation.php:138
 msgid "Days carried over from last year"
 msgstr "Dias transportados do ano anterior"
 
-#: class-vacation.php:141
+#: class-vacation.php:142
 msgid "Days approved"
 msgstr "Dias aprovados"
 
-#: class-vacation.php:147
+#: class-vacation.php:148
 msgid "Balance remaining"
 msgstr "Dias restantes"
 
-#: class-vacation.php:172
+#: class-vacation.php:173
 msgid "Number Format"
 msgstr "Formato dos números"
 
-#: class-vacation.php:349
+#: class-vacation.php:355
 msgid "PTO"
 msgstr "PTO"
 
-#: class-vacation.php:352
+#: class-vacation.php:358
 msgid "Carry Over"
 msgstr "Transportar"
 
-#: class-vacation.php:353
+#: class-vacation.php:359
 msgid "Approved Time Off"
 msgstr "Tempo de folga aprovado"
 
-#: class-vacation.php:354
+#: class-vacation.php:360
 msgid "Balance Remaining"
 msgstr "Tempo restante"
 
-#: class-vacation.php:383 includes/class-field-vacation.php:61
+#: class-vacation.php:389 includes/class-field-vacation.php:61
 msgid "Current balance:"
 msgstr "Balanço actual:"
 
