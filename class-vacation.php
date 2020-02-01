@@ -161,10 +161,10 @@ if ( class_exists( 'GFForms' ) ) {
 
 		function user_profile_options_update( $user_id ) {
 			if ( $this->current_user_can_any( 'gravityflowvacation_edit_profiles' ) ) {
-				update_user_option( $user_id, 'gravityflow_vacation_pto', sanitize_text_field( $_POST['gravityflow_vacation_pto'] ) );
-				update_user_option( $user_id, 'gravityflow_vacation_comp_days', sanitize_text_field( $_POST['gravityflow_vacation_comp_days'] ) );
-				update_user_option( $user_id, 'gravityflow_vacation_hr_adjustment', sanitize_text_field( $_POST['gravityflow_vacation_hr_adjustment'] ) );
-				update_user_option( $user_id, 'gravityflow_vacation_carry', sanitize_text_field( $_POST['gravityflow_vacation_carry'] ) );
+				update_user_option( $user_id, 'gravityflow_vacation_pto', floatval( $_POST['gravityflow_vacation_pto'] ) );
+				update_user_option( $user_id, 'gravityflow_vacation_comp_days', floatval( $_POST['gravityflow_vacation_comp_days'] ) );
+				update_user_option( $user_id, 'gravityflow_vacation_hr_adjustment', floatval( $_POST['gravityflow_vacation_hr_adjustment'] ) );
+				update_user_option( $user_id, 'gravityflow_vacation_carry', floatval( $_POST['gravityflow_vacation_carry'] ) );
 			}
 		}
 
