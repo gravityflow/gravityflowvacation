@@ -1,93 +1,94 @@
-# Copyright 2015-2020 Steven Henty.
+# Copyright 2015-2019 Steven Henty.
+# Translators:
+# FX Bénard <fxb@wp-translations.org>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowvacation\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2020-03-15 08:23:49+00:00\n"
+"POT-Creation-Date: 2019-03-02 18:43:57+00:00\n"
+"PO-Revision-Date: 2016-11-16 22:40+0000\n"
+"Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
+"Language-Team: Arabic (https://www.transifex.com/gravityflow/teams/50678/ar/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Steven Henty <support@gravityflow.io>\n"
-"Language-Team: Steven Henty <support@gravityflow.io>\n"
-"Language: en_US\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Gravity Flow Build Script\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-Country: United States\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
-"X-Generator: grunt-wp-i18n 1.0.3\n"
 
 #: class-vacation.php:84
 msgid "Manage Settings"
-msgstr ""
+msgstr "إدارة الإعدادات"
 
 #: class-vacation.php:85
 msgid "Uninstall"
-msgstr ""
+msgstr "إلغاء التثبيت"
 
 #: class-vacation.php:86
 msgid "Edit Users"
-msgstr ""
+msgstr "تحرير المستخدمين"
 
 #: class-vacation.php:96
 msgid "Vacation Information"
-msgstr ""
+msgstr "معلومات العطلة"
 
 #: class-vacation.php:100
 msgid "Annual Paid Time Off (PTO)"
-msgstr ""
+msgstr "الإجازة السنوية مدفوعة الأجر (PTO)"
 
 #: class-vacation.php:107
 msgid "Days based on service"
-msgstr ""
+msgstr "الأيام على أساس الخدمة"
 
 #: class-vacation.php:112 class-vacation.php:384
 msgid "Comp Days"
-msgstr ""
+msgstr "الأيام التعويضية"
 
 #: class-vacation.php:119
 msgid "Compensatory Days"
-msgstr ""
+msgstr "الأيام التعويضية"
 
 #: class-vacation.php:124 class-vacation.php:385
 msgid "HR Adjustment"
-msgstr ""
+msgstr "تعديل الموارد البشرية"
 
 #: class-vacation.php:131
 msgid "Adjustment days"
-msgstr ""
+msgstr "أيام التعديل"
 
 #: class-vacation.php:136
 msgid "Carry Over Days"
-msgstr ""
+msgstr "الأيام المؤجلة"
 
 #: class-vacation.php:143
 msgid "Days carried over from last year"
-msgstr ""
+msgstr "الأيام المؤجلة من العام الماضي"
 
 #: class-vacation.php:147
 msgid "Days approved"
-msgstr ""
+msgstr "الأيام التي تمّت الموافقة عليها "
 
 #: class-vacation.php:153
 msgid "Balance remaining"
-msgstr ""
+msgstr "المتبقي في ‏‏الرصيد"
 
 #: class-vacation.php:178
 msgid "Number Format"
-msgstr ""
+msgstr "تنسيق الرقم"
 
 #: class-vacation.php:368
 msgid ""
 "WARNING: You are about to delete this form and ALL entries associated with "
 "it. "
-msgstr ""
+msgstr "تحذير: أنت على وشك حذف هذا النموذج وجميع الإدخالات المقترنة به."
 
 #: class-vacation.php:368
 msgid ""
@@ -96,55 +97,59 @@ msgid ""
 "Also, this will affect the current VACATION BALANCE.\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"أيضًا، سيؤثر هذا على رصيد العطلة الحالي.\n"
+"\n"
 
 #: class-vacation.php:368
 msgid "Cancel to stop, OK to delete."
-msgstr ""
+msgstr "إلغاء للتوقف، موافق للحذف."
 
 #: class-vacation.php:383
 msgid "PTO"
-msgstr ""
+msgstr "الإجازة مدفوعة الأجر"
 
 #: class-vacation.php:386
 msgid "Carry Over"
-msgstr ""
+msgstr "تأجيل"
 
 #: class-vacation.php:387
 msgid "Approved Time Off"
-msgstr ""
+msgstr "إجازة معتمدة"
 
 #: class-vacation.php:388
 msgid "Balance Remaining"
-msgstr ""
+msgstr "المتبقي في ‏‏الرصيد"
 
 #: class-vacation.php:417 includes/class-field-vacation.php:61
 msgid "Current balance:"
-msgstr ""
+msgstr "الرصيد الحالي:"
 
 #: includes/class-field-vacation.php:25
 msgid "Workflow Fields"
-msgstr ""
+msgstr "حقول سير العمل"
 
 #: includes/class-field-vacation.php:47
 msgid "Vacation Days"
-msgstr ""
+msgstr "أيام العطلة"
 
 #: includes/class-field-vacation.php:71
 msgid "Days requested: %s"
-msgstr ""
+msgstr "الأيام المطلوبة: %s"
 
 #. Plugin Name of the plugin/theme
 msgid "Gravity Flow Vacation Requests Extension"
-msgstr ""
+msgstr "ملحق طلبات العطلة لGravity Flow "
 
 #. Author URI of the plugin/theme
 msgid "https://gravityflow.io"
-msgstr ""
+msgstr "https://gravityflow.io"
 
 #. Description of the plugin/theme
 msgid "Vacation Days Extension for Gravity Flow."
-msgstr ""
+msgstr "ملحق أيام العطلة لGravity Flow."
 
 #. Author of the plugin/theme
 msgid "Gravity Flow"
-msgstr ""
+msgstr "Gravity Flow"

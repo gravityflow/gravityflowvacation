@@ -2,7 +2,7 @@
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
 Requires at least: 4.0
-Tested up to: 5.1
+Tested up to: 5.3.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,8 +21,8 @@ Facebook: [Gravity Flow](https://www.facebook.com/gravityflow.io)
 1. [Purchase and install Gravity Forms](https://gravityflow.io/gravityforms)
 1. [Purchase and install Gravity Flow](https://gravityflow.io)
 1. Wordpress 4.3+
-1. Gravity Forms 1.9.4+
-1. Gravity Flow 1.1.0.4+
+1. The latest version of Gravity Forms.
+1. The latest version of Gravity Flow.
 
 
 = Support =
@@ -43,6 +43,10 @@ The Gravity Flow Vacation Requests Extension will work with any license of [Grav
 
 
 == ChangeLog ==
+
+= 1.3.1 =
+- Added security enhancements.
+- Added translations Catalan and Arabic.
 
 = 1.3 =
 - Added support for the license key constant GRAVITY_FLOW_VACATION_LICENSE_KEY.

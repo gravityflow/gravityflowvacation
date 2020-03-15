@@ -1,4 +1,4 @@
-# Copyright 2015-2018 Steven Henty.
+# Copyright 2015-2019 Steven Henty.
 # Translators:
 # Steve Henty, 2017
 # 
@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowvacation\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2018-03-31 08:49:03+00:00\n"
+"POT-Creation-Date: 2019-03-02 18:43:57+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:40+0000\n"
 "Last-Translator: Steve Henty, 2017\n"
 "Language-Team: English (United Kingdom) (https://www.transifex.com/gravityflow/teams/50678/en_GB/)\n"
@@ -24,83 +24,101 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
-#: class-vacation.php:79
+#: class-vacation.php:84
 msgid "Manage Settings"
 msgstr ""
 
-#: class-vacation.php:80
+#: class-vacation.php:85
 msgid "Uninstall"
 msgstr ""
 
-#: class-vacation.php:81
+#: class-vacation.php:86
 msgid "Edit Users"
 msgstr ""
 
-#: class-vacation.php:91
+#: class-vacation.php:96
 msgid "Vacation Information"
 msgstr "Vacation Information"
 
-#: class-vacation.php:95
+#: class-vacation.php:100
 msgid "Annual Paid Time Off (PTO)"
 msgstr ""
 
-#: class-vacation.php:102
+#: class-vacation.php:107
 msgid "Days based on service"
 msgstr ""
 
-#: class-vacation.php:107 class-vacation.php:356
+#: class-vacation.php:112 class-vacation.php:384
 msgid "Comp Days"
 msgstr ""
 
-#: class-vacation.php:114
+#: class-vacation.php:119
 msgid "Compensatory Days"
 msgstr ""
 
-#: class-vacation.php:119 class-vacation.php:357
+#: class-vacation.php:124 class-vacation.php:385
 msgid "HR Adjustment"
 msgstr ""
 
-#: class-vacation.php:126
+#: class-vacation.php:131
 msgid "Adjustment days"
 msgstr ""
 
-#: class-vacation.php:131
+#: class-vacation.php:136
 msgid "Carry Over Days"
 msgstr ""
 
-#: class-vacation.php:138
+#: class-vacation.php:143
 msgid "Days carried over from last year"
 msgstr ""
 
-#: class-vacation.php:142
+#: class-vacation.php:147
 msgid "Days approved"
 msgstr ""
 
-#: class-vacation.php:148
+#: class-vacation.php:153
 msgid "Balance remaining"
 msgstr ""
 
-#: class-vacation.php:173
+#: class-vacation.php:178
 msgid "Number Format"
 msgstr ""
 
-#: class-vacation.php:355
+#: class-vacation.php:368
+msgid ""
+"WARNING: You are about to delete this form and ALL entries associated with "
+"it. "
+msgstr ""
+
+#: class-vacation.php:368
+msgid ""
+"\n"
+"\n"
+"Also, this will affect the current VACATION BALANCE.\n"
+"\n"
+msgstr ""
+
+#: class-vacation.php:368
+msgid "Cancel to stop, OK to delete."
+msgstr ""
+
+#: class-vacation.php:383
 msgid "PTO"
 msgstr ""
 
-#: class-vacation.php:358
+#: class-vacation.php:386
 msgid "Carry Over"
 msgstr ""
 
-#: class-vacation.php:359
+#: class-vacation.php:387
 msgid "Approved Time Off"
 msgstr ""
 
-#: class-vacation.php:360
+#: class-vacation.php:388
 msgid "Balance Remaining"
 msgstr ""
 
-#: class-vacation.php:389 includes/class-field-vacation.php:61
+#: class-vacation.php:417 includes/class-field-vacation.php:61
 msgid "Current balance:"
 msgstr ""
 
